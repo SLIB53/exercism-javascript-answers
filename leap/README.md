@@ -35,7 +35,7 @@ install the necessary dependencies:
 Install assignment dependencies:
 
 ```bash
-$ npm install
+$ yarn
 ```
 
 ## Making the test suite pass
@@ -43,7 +43,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+$ yarn test
 ```
 
 ## Source
