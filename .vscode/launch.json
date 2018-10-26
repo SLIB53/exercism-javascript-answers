@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Length Encoding, Launch Tests",
+            "cwd": "${workspaceFolder}/run-length-encoding",
+            "program": "${workspaceFolder}/run-length-encoding/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--no-cache",
+                "--watch"
+            ],
+            "runtimeArgs": [
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
