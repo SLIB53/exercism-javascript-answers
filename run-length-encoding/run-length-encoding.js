@@ -15,12 +15,12 @@ function shrinkToEncodings(str) {
     i < str.length;
     i += 1
   ) {
-    const ctxCreateEncoding = () => new Encoding(char, runLength);
+    const createLocalEnc = () => new Encoding(char, runLength);
 
     const cur = str.charAt(i);
 
     if (str.charAt(i) !== char) {
-      buf.push(ctxCreateEncoding());
+      buf.push(createLocalEnc());
       char = cur;
       runLength = 1;
     } else {
@@ -28,7 +28,7 @@ function shrinkToEncodings(str) {
       runLength += 1;
     }
 
-    if (i === str.length - 1) buf.push(ctxCreateEncoding());
+    if (i === str.length - 1) buf.push(createLocalEnc());
   }
 
   return buf;
