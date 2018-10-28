@@ -4,9 +4,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Run Length Encoding (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/run-length-encoding",
-            "program": "${workspaceFolder}/run-length-encoding/node_modules/.bin/jest",
+            "name": "Armstrong Numbers (Debug), Launch Tests",
+            "cwd": "${workspaceFolder}/armstrong-numbers",
+            "program": "${workspaceFolder}/armstrong-numbers/node_modules/.bin/jest",
             "args": [
                 "--runInBand",
                 "--no-cache",
@@ -32,6 +32,22 @@
                 "--inspect"
             ],
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Length Encoding (Debug), Launch Tests",
+            "cwd": "${workspaceFolder}/run-length-encoding",
+            "program": "${workspaceFolder}/run-length-encoding/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--no-cache",
+                "--watch"
+            ],
+            "runtimeArgs": [
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        },
     ]
 }
