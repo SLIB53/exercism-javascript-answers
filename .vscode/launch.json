@@ -36,6 +36,22 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "RNA Transcription (Debug), Launch Tests",
+            "cwd": "${workspaceFolder}/rna-transcription",
+            "program": "${workspaceFolder}/rna-transcription/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--no-cache",
+                "--watch"
+            ],
+            "runtimeArgs": [
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Run Length Encoding (Debug), Launch Tests",
             "cwd": "${workspaceFolder}/run-length-encoding",
             "program": "${workspaceFolder}/run-length-encoding/node_modules/.bin/jest",
