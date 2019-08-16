@@ -65,5 +65,21 @@
             ],
             "console": "integratedTerminal"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Simple Cipher (Debug), Launch Tests",
+            "cwd": "${workspaceFolder}/simple-cipher",
+            "program": "${workspaceFolder}/simple-cipher/node_modules/.bin/jest",
+            "args": [
+                "--runInBand",
+                "--no-cache",
+                "--watch"
+            ],
+            "runtimeArgs": [
+                "--inspect"
+            ],
+            "console": "integratedTerminal"
+        },
     ]
 }
