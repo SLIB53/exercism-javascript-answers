@@ -53,7 +53,7 @@ function expandToEncodings(str) {
     return buf;
   };
 
-  return splitEncodingStrings(str).map((encStr) => {
+  return splitEncodingStrings().map((encStr) => {
     const digitsPart = /\d+/g.exec(encStr);
     const charPart = /\D+/g.exec(encStr);
 
