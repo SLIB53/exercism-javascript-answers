@@ -1,72 +1,51 @@
-import { isString } from 'util';
 import crypto from 'crypto';
 
-function generateRandomLetter() {
-  /**
-   * Generate a secure random byte,
-   * wrap within the range 0-25 inclusive,
-   * add to ASCII 'a' (value of 97).
-   *
-   * Note that since this maps 256 values to 26 values,
-   * and 256 is not evenly divisible by 26,
-   * some values will become slightly less common than others.
-   */
-  return String.fromCharCode((crypto.randomBytes(1)[0] % 26) + 97);
-}
+/**
+ * Generate a secure random byte,
+ * wrap within the range 0-25 inclusive,
+ * add to ASCII 'a' (value of 97).
+ *
+ * Note that since this maps 256 values to 26 values,
+ * and 256 is not evenly divisible by 26,
+ * a few values will become slightly more common than others.
+ */
+const generateRandomLetter = () => String.fromCharCode(crypto.randomBytes(1)[0] % 26 + 97);
 
-function generateRandomLetters(numLetters) {
-  return Array(numLetters)
-    .fill()
-    .map(() => generateRandomLetter());
-}
+const generateRandomLetters = numLetters => Array.from({ length: numLetters }, generateRandomLetter);
 
-function generateRandomKey(keyLength) {
-  return generateRandomLetters(keyLength).join('');
-}
+const generateRandomKey = keyLength => generateRandomLetters(keyLength).join('');
 
-function shiftDistanceFromKey(key, i) {
-  return key.charCodeAt(i % key.length) - 97;
-}
+const shiftDistanceFromKey = (key, i) => key.charCodeAt(i % key.length) - 97;
 
-function encode(key, message) {
-  return message
-    .split('')
-    .map((c, i) => {
-      let alphabetIndex = c.charCodeAt(0) - 97 + shiftDistanceFromKey(key, i);
-      alphabetIndex %= 26;
-      return String.fromCharCode(97 + alphabetIndex);
-    })
-    .join('');
-}
+const encode = (key, message) => message
+  .split('')
+  .map((c, i) => {
+    let alphabetIndex = c.charCodeAt(0) - 97 + shiftDistanceFromKey(key, i);
+    alphabetIndex %= 26;
+    return String.fromCharCode(97 + alphabetIndex);
+  })
+  .join('');
 
-function decode(key, message) {
-  return message
-    .split('')
-    .map((c, i) => {
-      let reverseAlphabetIndex = 122 - c.charCodeAt(0) + shiftDistanceFromKey(key, i);
-      reverseAlphabetIndex %= 26;
-      return String.fromCharCode(122 - reverseAlphabetIndex);
-    })
-    .join('');
-}
+const decode = (key, message) => message
+  .split('')
+  .map((c, i) => {
+    let reverseAlphabetIndex = 122 - c.charCodeAt(0) + shiftDistanceFromKey(key, i);
+    reverseAlphabetIndex %= 26;
+    return String.fromCharCode(122 - reverseAlphabetIndex);
+  })
+  .join('');
 
-function isValidKey(candidate) {
-  if (!isString(candidate) || candidate.trim() === '') {
-    return false;
-  }
+const isValidKey = candidate => typeof candidate === 'string'
+  && candidate.trim() !== ''
+  && candidate.split('').every(c => c >= 'a' && c <= 'z');
 
-  return candidate.split('').every(c => c >= 'a' && c <= 'z');
-}
-
-class Cipher {
-  constructor(key) {
-    const keyCandidate = key !== undefined ? key : generateRandomKey(100);
-
-    if (!isValidKey(keyCandidate)) {
+export class Cipher {
+  constructor(key = generateRandomKey(100)) {
+    if (!isValidKey(key)) {
       throw new Error('Bad key');
     }
 
-    this.key = keyCandidate;
+    this.key = key;
   }
 
   encode(message) {
@@ -77,5 +56,3 @@ class Cipher {
     return decode(this.key, message);
   }
 }
-
-export { Cipher };
