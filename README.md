@@ -29,10 +29,10 @@ Alternatively, tests can be run from a container using the ['Dockerfile'](Docker
 docker build --tag exercism-javascript-answers:latest .
 ```
 
-Why yarn?
+Why Yarn?
 --------------------------------------------------------------------------------
 
-Bluntly, it's because cloning this repo and running tests for all of the exercises is understandably much faster with yarn. With each exercise being extremely similar subprojects, it became impractical and unwise to not take advantage of yarn's package caching.
+When I first began developing this project, Yarn performed much better due to its package caching.
 
 [exercism]: https://exercism.io
 [exercism-javascript-track]: https://exercism.io/tracks/javascript
