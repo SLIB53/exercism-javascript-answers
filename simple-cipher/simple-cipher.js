@@ -9,27 +9,25 @@ import crypto from 'crypto';
  * and 256 is not evenly divisible by 26,
  * a few values will become slightly more common than others.
  */
-const generateRandomLetter = () => String.fromCharCode(crypto.randomBytes(1)[0] % 26 + 97);
+const generateRandomLetter = () => String.fromCharCode((crypto.randomBytes(1)[0] % 26) + 97);
 
 const generateRandomLetters = numLetters => Array.from({ length: numLetters }, generateRandomLetter);
 
 const generateRandomKey = keyLength => generateRandomLetters(keyLength).join('');
 
-const shiftDistanceFromKey = (key, i) => key.charCodeAt(i % key.length) - 97;
+const getShiftDistance = (key, i) => key.charCodeAt(i % key.length) - 97;
 
-const encode = (key, message) => message
-  .split('')
+const encode = (key, message) => [...message]
   .map((c, i) => {
-    let alphabetIndex = c.charCodeAt(0) - 97 + shiftDistanceFromKey(key, i);
+    let alphabetIndex = c.charCodeAt(0) - 97 + getShiftDistance(key, i);
     alphabetIndex %= 26;
     return String.fromCharCode(97 + alphabetIndex);
   })
   .join('');
 
-const decode = (key, message) => message
-  .split('')
+const decode = (key, message) => [...message]
   .map((c, i) => {
-    let reverseAlphabetIndex = 122 - c.charCodeAt(0) + shiftDistanceFromKey(key, i);
+    let reverseAlphabetIndex = 122 - c.charCodeAt(0) + getShiftDistance(key, i);
     reverseAlphabetIndex %= 26;
     return String.fromCharCode(122 - reverseAlphabetIndex);
   })
@@ -37,7 +35,7 @@ const decode = (key, message) => message
 
 const isValidKey = candidate => typeof candidate === 'string'
   && candidate.trim() !== ''
-  && candidate.split('').every(c => c >= 'a' && c <= 'z');
+  && [...candidate].every(c => c >= 'a' && c <= 'z');
 
 export class Cipher {
   constructor(key = generateRandomKey(100)) {
