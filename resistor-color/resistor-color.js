@@ -1,7 +1,3 @@
-export const colorCode = color => {
-  return COLORS.indexOf(color);
-};
-
 export const COLORS = [
   "black",
   "brown",
@@ -14,3 +10,7 @@ export const COLORS = [
   "grey",
   "white"
 ];
+
+const COLORS_LOOKUP_TABLE = new Map(COLORS.map((color, i) => [color, i]));
+
+export const colorCode = color => COLORS_LOOKUP_TABLE.get(color);
