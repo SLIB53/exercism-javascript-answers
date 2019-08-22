@@ -17,25 +17,19 @@ const generateRandomKey = keyLength => generateRandomLetters(keyLength).join('')
 
 const getShiftDistance = (key, i) => key.charCodeAt(i % key.length) - 97;
 
-const encode = (key, message) => [...message]
-  .map((c, i) => {
-    let alphabetIndex = c.charCodeAt(0) - 97 + getShiftDistance(key, i);
-    alphabetIndex %= 26;
-    return String.fromCharCode(97 + alphabetIndex);
-  })
-  .join('');
+const encode = (key, message) => Array.from(message, (c, i) => {
+  let alphabetIndex = c.charCodeAt(0) - 97 + getShiftDistance(key, i);
+  alphabetIndex %= 26;
+  return String.fromCharCode(97 + alphabetIndex);
+}).join('');
 
-const decode = (key, message) => [...message]
-  .map((c, i) => {
-    let reverseAlphabetIndex = 122 - c.charCodeAt(0) + getShiftDistance(key, i);
-    reverseAlphabetIndex %= 26;
-    return String.fromCharCode(122 - reverseAlphabetIndex);
-  })
-  .join('');
+const decode = (key, message) => Array.from(message, (c, i) => {
+  let reverseAlphabetIndex = 122 - c.charCodeAt(0) + getShiftDistance(key, i);
+  reverseAlphabetIndex %= 26;
+  return String.fromCharCode(122 - reverseAlphabetIndex);
+}).join('');
 
-const isValidKey = candidate => typeof candidate === 'string'
-  && candidate.trim() !== ''
-  && [...candidate].every(c => c >= 'a' && c <= 'z');
+const isValidKey = candidate => typeof candidate === 'string' && candidate.trim() !== '' && /^[a-z]*$/.test(candidate);
 
 export class Cipher {
   constructor(key = generateRandomKey(100)) {
