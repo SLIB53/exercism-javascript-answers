@@ -1,21 +1,22 @@
 const scoreLookupTable = (() => {
-  let buffer = new Map();
+  let m = new Map();
 
-  ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"].map(l => buffer.set(l, 1));
-  ["d", "g"].map(l => buffer.set(l, 2));
-  ["b", "c", "m", "p"].map(l => buffer.set(l, 3));
-  ["f", "h", "v", "w", "y"].map(l => buffer.set(l, 4));
-  buffer.set("k", 5);
-  ["j", "x"].map(l => buffer.set(l, 8));
-  ["q", "z"].map(l => buffer.set(l, 10));
+  ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"].forEach(l => m.set(l, 1));
+  ["d", "g"].forEach(l => m.set(l, 2));
+  ["b", "c", "m", "p"].forEach(l => m.set(l, 3));
+  ["f", "h", "v", "w", "y"].forEach(l => m.set(l, 4));
+  m.set("k", 5);
+  ["j", "x"].forEach(l => m.set(l, 8));
+  ["q", "z"].forEach(l => m.set(l, 10));
 
-  return buffer;
+  return m;
 })();
 
 /**
  * @param {string} word
  */
 export const score = word =>
-  [...word]
-    .map(letter => scoreLookupTable.get(letter.toLowerCase()))
-    .reduce((pointsOfLetter, pointsAcc) => pointsOfLetter + pointsAcc, 0);
+  Array.from(word, letter => scoreLookupTable.get(letter.toLowerCase())).reduce(
+    (pointsAcc, pointsOfLetter) => pointsAcc + pointsOfLetter,
+    0
+  );
