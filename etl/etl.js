@@ -1,12 +1,12 @@
 export const transform = previous => {
-  let newBuffer = {};
+  let nextBuffer = {};
 
-  for (const [previousKey, previousValues] of Object.entries(previous)) {
-    previousValues.forEach(previousValue => {
-      const newKey = previousValue.toLowerCase();
-      newBuffer[newKey] = Number(previousKey);
-    });
-  }
+  Object.entries(previous).forEach(([previousKey, previousValues]) =>
+    previousValues.forEach(
+      previousValue =>
+        (nextBuffer[previousValue.toLowerCase()] = Number(previousKey))
+    )
+  );
 
-  return newBuffer;
+  return nextBuffer;
 };
