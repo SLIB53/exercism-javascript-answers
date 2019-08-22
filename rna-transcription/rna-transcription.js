@@ -1,28 +1,13 @@
-function dnaNucleotideToRna(dnaNucleotide) {
-  let rnaNucleotideTemp;
+const dnaToRnaTable = new Map([["G", "C"], ["C", "G"], ["T", "A"], ["A", "U"]]);
 
-  switch (dnaNucleotide) {
-    case 'G':
-      rnaNucleotideTemp = 'C';
-      break;
-    case 'C':
-      rnaNucleotideTemp = 'G';
-      break;
-    case 'T':
-      rnaNucleotideTemp = 'A';
-      break;
-    case 'A':
-      rnaNucleotideTemp = 'U';
-      break;
-    default:
-      throw new Error('Invalid input DNA.');
-  }
+const dnaNucleotideToRna = dnaNucleotide => {
+  const rnaNucleotideCandidate = dnaToRnaTable.get(dnaNucleotide);
 
-  return rnaNucleotideTemp;
-}
+  if (rnaNucleotideCandidate === undefined)
+    throw new Error("Invalid input DNA.");
 
-function toRna(dnaSequence) {
-  return Array.from(dnaSequence).map(dnaNucleotideToRna).join('');
-}
+  return rnaNucleotideCandidate;
+};
 
-export { toRna };
+export const toRna = dnaSequence =>
+  Array.from(dnaSequence, dnaNucleotideToRna).join("");
