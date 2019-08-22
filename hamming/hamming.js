@@ -5,7 +5,6 @@ export const compute = (string1, string2) => {
     throw new Error('left and right strands must be of equal length');
   }
 
-  return [...string1]
-    .map((c, i) => [c, string2.charAt(i)])
+  return Array.from(string1, (c, i) => [c, string2.charAt(i)])
     .reduce((acc, [left, right]) => acc + (left !== right ? 1 : 0), 0);
 }
