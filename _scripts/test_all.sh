@@ -16,7 +16,7 @@ do
         
         if ! yarn test
         then
-            echo "A test in $item failed."
+            echo "A test in $exercise_dirname failed."
             exit 1
         fi
     fi
