@@ -8,6 +8,45 @@ Exercism JavaScript Answers
 
 As with all exercism tracks, I practice creating these solutions to acquire a basic knowledge of the syntax and built-in functionality of the language, as well as improved fluency in reading and writing idiomatic code for the language.
 
+Exercises
+--------------------------------------------------------------------------------
+
+### Easy
+
+- [Armstrong Numbers](armstrong-numbers)
+- [Collatz Conjecture](collatz-conjecture)
+- [D&D Character](dnd-character)
+- [Darts](darts)
+- [ETL](etl)
+- [Hamming](hamming)
+- [Hello World](hello-world)
+- [Leap](leap)
+- [Protein Translation](protein-translation)
+- [Raindrops](raindrops)
+- [Resistor Color](resistor-color)
+- [Reverse String](reverse-string)
+- [RNA Transcription](rna-transcription)
+- [Roman Numerals](roman-numerals)
+- [Run Length Encoding](run-length-encoding)
+- [Triangle](triangle)
+- [Two Fer](two-fer)
+
+
+### Medium
+
+- [All Your Base](all-your-base)
+- [Allergies](allergies)
+- [Minesweeper](minesweeper)
+- [Nucleotide Count](nucleotide-count)
+- [Scrabble Score](scrabble-score)
+- [Simple Cipher](simple-cipher)
+
+
+### Hard
+
+- [Queen Attack](queen-attack)
+
+
 Running Tests
 --------------------------------------------------------------------------------
 
