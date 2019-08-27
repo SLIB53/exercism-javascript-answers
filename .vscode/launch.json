@@ -4,73 +4,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Armstrong Numbers (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/armstrong-numbers",
-            "program": "${workspaceFolder}/armstrong-numbers/node_modules/.bin/jest",
-            "args": [
-                "--runInBand",
-                "--no-cache",
-                "--watch"
-            ],
-            "runtimeArgs": [
-                "--inspect"
-            ],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Protein Translation (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/protein-translation",
-            "program": "${workspaceFolder}/protein-translation/node_modules/.bin/jest",
-            "args": [
-                "--runInBand",
-                "--no-cache",
-                "--watch"
-            ],
-            "runtimeArgs": [
-                "--inspect"
-            ],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "RNA Transcription (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/rna-transcription",
-            "program": "${workspaceFolder}/rna-transcription/node_modules/.bin/jest",
-            "args": [
-                "--runInBand",
-                "--no-cache",
-                "--watch"
-            ],
-            "runtimeArgs": [
-                "--inspect"
-            ],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Run Length Encoding (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/run-length-encoding",
-            "program": "${workspaceFolder}/run-length-encoding/node_modules/.bin/jest",
-            "args": [
-                "--runInBand",
-                "--no-cache",
-                "--watch"
-            ],
-            "runtimeArgs": [
-                "--inspect"
-            ],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Simple Cipher (Debug), Launch Tests",
-            "cwd": "${workspaceFolder}/simple-cipher",
-            "program": "${workspaceFolder}/simple-cipher/node_modules/.bin/jest",
+            "name": "Hello World (Debug), Launch Tests",
+            "cwd": "${workspaceFolder}/hello-world",
+            "program": "${workspaceFolder}/hello-world/node_modules/.bin/jest",
             "args": [
                 "--runInBand",
                 "--no-cache",
