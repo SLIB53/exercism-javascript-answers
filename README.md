@@ -1,7 +1,6 @@
 Exercism JavaScript Answers
 ================================================================================
 
-[![Build Status](https://travis-ci.com/SLIB53/exercism-javascript-answers.svg?branch=master)](https://travis-ci.com/SLIB53/exercism-javascript-answers)
 [![DeepScan grade](https://deepscan.io/api/teams/5096/projects/6886/branches/60468/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5096&pid=6886&bid=60468)
 
 [Exercism.io][exercism] provides practice problems and mentorship for many programming langauges. This repository contains my solutions to the ["JavaScript Track"][exercism-javascript-track].
