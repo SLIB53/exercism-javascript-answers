@@ -13,6 +13,7 @@ Exercises
 
 ### Easy
 
+- [Anagram](anagram)
 - [Armstrong Numbers](armstrong-numbers)
 - [Collatz Conjecture](collatz-conjecture)
 - [D&D Character](dnd-character)
