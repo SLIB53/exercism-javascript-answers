@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v1
+    - name: Run from node docker image
+      uses: docker://node:alpine
+    - name: Run tests
+      run: sh _scripts/test_all.sh
