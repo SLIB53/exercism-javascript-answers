@@ -1,4 +1,4 @@
-name: CI
+name: Lint
 
 on: [push]
 
@@ -12,5 +12,5 @@ jobs:
       uses: actions/checkout@v1
     - name: Run from node docker image
       uses: docker://node:alpine
-    - name: Run tests
-      run: sh _scripts/test_all.sh
+    - name: Run lint scripts
+      run: sh _scripts/lint_all.sh
