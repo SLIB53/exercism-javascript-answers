@@ -11,7 +11,9 @@ import crypto from 'crypto';
  */
 const generateRandomLetter = () => String.fromCharCode((crypto.randomBytes(1)[0] % 26) + 97);
 
-const generateRandomLetters = numLetters => Array.from({ length: numLetters }, generateRandomLetter);
+const generateRandomLetters = numLetters => Array.from(
+  { length: numLetters }, generateRandomLetter,
+);
 
 const generateRandomKey = keyLength => generateRandomLetters(keyLength).join('');
 
@@ -29,7 +31,9 @@ const decode = (key, message) => Array.from(message, (c, i) => {
   return String.fromCharCode(122 - reverseAlphabetIndex);
 }).join('');
 
-const isValidKey = candidate => typeof candidate === 'string' && candidate.trim() !== '' && /^[a-z]*$/.test(candidate);
+const isValidKey = candidate => typeof candidate === 'string'
+  && candidate.trim() !== ''
+  && /^[a-z]*$/.test(candidate);
 
 export class Cipher {
   constructor(key = generateRandomKey(100)) {
