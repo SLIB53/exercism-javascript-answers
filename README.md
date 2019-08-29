@@ -40,7 +40,7 @@ Exercises
 - [Nucleotide Count](nucleotide-count)
 - [Scrabble Score](scrabble-score)
 - [Simple Cipher](simple-cipher)
-
+- [Sum of Multiples](sum-of-multiples)
 
 ### Hard
 
