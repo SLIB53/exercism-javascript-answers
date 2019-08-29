@@ -14,9 +14,9 @@ do
     then
         yarn
         
-        if ! yarn test
+        if ! yarn lint
         then
-            echo "Testing failed in $exercise_dirname"
+            echo "Linting failed in $exercise_dirname"
             exit 1
         fi
     fi
