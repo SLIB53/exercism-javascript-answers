@@ -43,6 +43,7 @@ Exercises
 - [Scrabble Score](scrabble-score)
 - [Simple Cipher](simple-cipher)
 - [Sum of Multiples](sum-of-multiples)
+- [Pascal's Triangle](pascals-triangle)
 
 ### Hard
 
