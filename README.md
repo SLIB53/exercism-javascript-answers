@@ -37,6 +37,7 @@ Exercises
 - [All Your Base](all-your-base)
 - [Allergies](allergies)
 - [Bob](bob)
+- [Grains](grains)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
 - [Scrabble Score](scrabble-score)
