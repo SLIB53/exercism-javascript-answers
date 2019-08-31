@@ -24,6 +24,7 @@ Exercises
 - [Leap](leap)
 - [Protein Translation](protein-translation)
 - [Raindrops](raindrops)
+- [Resistor Color Duo](resistor-color-duo)
 - [Resistor Color](resistor-color)
 - [Reverse String](reverse-string)
 - [RNA Transcription](rna-transcription)
