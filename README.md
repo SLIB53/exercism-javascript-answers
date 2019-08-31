@@ -20,6 +20,7 @@ Exercises
 - [ETL](etl)
 - [Hamming](hamming)
 - [Hello World](hello-world)
+- [Isogram](isogram)
 - [Leap](leap)
 - [Protein Translation](protein-translation)
 - [Raindrops](raindrops)
@@ -30,7 +31,6 @@ Exercises
 - [Run Length Encoding](run-length-encoding)
 - [Triangle](triangle)
 - [Two Fer](two-fer)
-
 
 ### Medium
 
