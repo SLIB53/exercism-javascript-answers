@@ -1,5 +1,5 @@
 function* uuidGenerator(maxNumUuids) {
-  let uuids = {};
+  let uuids = [];
 
   const lazyLoadAt = (map, index) => {
     if (map[index] === undefined) map[index] = index;
@@ -26,7 +26,13 @@ class RobotUuidGenerator {
   }
 
   next() {
-    return this._uuidGenerator.next().value;
+    const cur = this._uuidGenerator.next();
+
+    if (cur.done) {
+        throw new Error("No more available UUIDs");
+    }
+
+    return cur.value;
   }
 
   reset() {
@@ -42,11 +48,11 @@ const robotUuidGenerator = new RobotUuidGenerator();
 
 export class Robot {
   constructor() {
-    this._uuid = robotUuidGenerator.next();
+    this.reset();
   }
 
   get name() {
-    return this._uuid ? Robot.formatUuid(this._uuid) : '';
+    return Robot.formatUuid(this._uuid);
   }
 
   reset() {
