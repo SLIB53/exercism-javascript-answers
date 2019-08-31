@@ -37,6 +37,7 @@ Exercises
 - [All Your Base](all-your-base)
 - [Allergies](allergies)
 - [Bob](bob)
+- [Flatten Array](flatten-array)
 - [Grains](grains)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
