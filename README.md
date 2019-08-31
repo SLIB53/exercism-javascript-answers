@@ -40,6 +40,7 @@ Exercises
 - [Grains](grains)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
+- [Robot Name](robot-name)
 - [Scrabble Score](scrabble-score)
 - [Simple Cipher](simple-cipher)
 - [Sum of Multiples](sum-of-multiples)
