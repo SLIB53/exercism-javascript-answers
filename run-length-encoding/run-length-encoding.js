@@ -5,16 +5,10 @@ class Encoding {
   }
 }
 
-function shrinkToEncodings(str) {
+const shrinkToEncodings = str => {
   const buf = [];
 
-  for (
-    let i = 0,
-      char = str.charAt(0),
-      runLength = 0;
-    i < str.length;
-    i += 1
-  ) {
+  for (let i = 0, char = str.charAt(0), runLength = 0; i < str.length; i += 1) {
     const createLocalEnc = () => new Encoding(char, runLength);
 
     const cur = str.charAt(i);
@@ -32,9 +26,9 @@ function shrinkToEncodings(str) {
   }
 
   return buf;
-}
+};
 
-function expandToEncodings(str) {
+const expandToEncodings = str => {
   const matchEncodingRegex = /\d+.|./g;
 
   const splitEncodingStrings = () => {
@@ -53,7 +47,7 @@ function expandToEncodings(str) {
     return buf;
   };
 
-  return splitEncodingStrings().map((encStr) => {
+  return splitEncodingStrings().map(encStr => {
     const digitsPart = /\d+/g.exec(encStr);
     const charPart = /\D+/g.exec(encStr);
 
@@ -65,20 +59,18 @@ function expandToEncodings(str) {
 
     return new Encoding(char, runLength);
   });
-}
+};
 
-function toEncodedString(encodings) {
-  return encodings.map(enc => (enc.runLength > 1 ? enc.runLength : '') + enc.char)
-    .join('');
-}
+const toEncodedString = encodings => {
+  return encodings
+    .map(enc => (enc.runLength > 1 ? enc.runLength : "") + enc.char)
+    .join("");
+};
 
-function toDecodedString(encodings) {
-  return encodings.map(enc => enc.char.repeat(enc.runLength))
-    .join('');
-}
+const toDecodedString = encodings => {
+  return encodings.map(enc => enc.char.repeat(enc.runLength)).join("");
+};
 
-const encode = string => toEncodedString(shrinkToEncodings(string));
+export const encode = string => toEncodedString(shrinkToEncodings(string));
 
-const decode = string => toDecodedString(expandToEncodings(string));
-
-export { encode, decode };
+export const decode = string => toDecodedString(expandToEncodings(string));

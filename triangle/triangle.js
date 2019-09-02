@@ -1,12 +1,12 @@
-function isValidTriangle(s1, s2, s3) {
+const isValidTriangle = (s1, s2, s3) => {
   const sidesSorted = [s1, s2, s3].sort((a, b) => a - b);
 
   return (
     sidesSorted[0] > 0 && sidesSorted[0] + sidesSorted[1] >= sidesSorted[2]
   );
-}
+};
 
-function classifyTriangle(s1, s2, s3) {
+const classifyTriangle = (s1, s2, s3) => {
   const sidesSorted = [s1, s2, s3].sort((a, b) => a - b);
 
   if (sidesSorted[0] === sidesSorted[2]) {
@@ -19,7 +19,7 @@ function classifyTriangle(s1, s2, s3) {
   } else {
     return "scalene";
   }
-}
+};
 
 export class Triangle {
   constructor(s1, s2, s3) {
