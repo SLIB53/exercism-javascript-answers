@@ -1,4 +1,4 @@
-function steps_impl(n, counter = 0) {
+const steps_impl = (n, counter = 0) => {
   if (n === 1) {
     return counter;
   }

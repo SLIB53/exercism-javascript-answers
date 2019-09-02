@@ -1,7 +1,7 @@
 const parseDigit = (n, order) =>
   n >= Math.pow(10, order) ? Math.floor((n / Math.pow(10, order)) % 10) : 0;
 
-function formatDigit(digit, remSymbol, fivesSymbol, greaterOrderSymbol) {
+const formatDigit = (digit, remSymbol, fivesSymbol, greaterOrderSymbol) => {
   const extractRem = d => d % 5;
   const formatRem = rem =>
     rem !== 4
@@ -18,7 +18,7 @@ function formatDigit(digit, remSymbol, fivesSymbol, greaterOrderSymbol) {
   return digit !== 9
     ? `${createFivesString()}${createRemString()}`
     : createNineString();
-}
+};
 
 export const toRoman = n => {
   const thousands = formatDigit(parseDigit(n, 3), "M", "", "");
