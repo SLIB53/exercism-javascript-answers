@@ -22,6 +22,7 @@ Exercises
 - [Hello World](hello-world)
 - [Isogram](isogram)
 - [Leap](leap)
+- [Pangram](pangram)
 - [Protein Translation](protein-translation)
 - [Raindrops](raindrops)
 - [Resistor Color Duo](resistor-color-duo)
