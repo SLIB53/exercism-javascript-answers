@@ -41,6 +41,7 @@ Exercises
 - [Bob](bob)
 - [Flatten Array](flatten-array)
 - [Grains](grains)
+- [Linked list](linked-list)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
 - [Robot Name](robot-name)
