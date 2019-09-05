@@ -1,20 +1,20 @@
-function* walkFrom(startNode) {
+function* nodeIterator(startNode) {
   for (let cur = startNode; cur != null; cur = cur.nextNode) {
     yield cur;
   }
 }
 
-function* walkUntil(startNode, condition, onCondition) {
-  let iterator = walkFrom(startNode);
-
-  for (let cur = iterator.next(); !cur.done; cur = iterator.next()) {
-    yield cur.value;
-
-    if (condition && condition(cur.value)) {
-      if (onCondition) onCondition(cur.value);
-      break;
+function* untilNodeIterator(startNode, condition = () => {}) {
+  for (const cur of nodeIterator(startNode)) {
+    if (condition(cur)) {
+      yield cur;
+      return;
     }
+
+    yield cur;
   }
+
+  yield null;
 }
 
 class Node {
@@ -114,7 +114,13 @@ export class LinkedList {
       if (tailSide !== null) tailSide.previousNode = headSide;
     };
 
-    [...walkUntil(this.head, n => n.contents === targetContents, dissolveNode)];
+    const terminal = [
+      ...untilNodeIterator(this.head, n => n.contents === targetContents)
+    ].slice(-1)[0];
+
+    if (terminal) {
+      dissolveNode(terminal);
+    }
   }
 
   count() {
@@ -122,6 +128,6 @@ export class LinkedList {
   }
 
   toList() {
-    return [...walkFrom(this.head)];
+    return [...nodeIterator(this.head)];
   }
 }
