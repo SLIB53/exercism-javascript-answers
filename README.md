@@ -41,7 +41,7 @@ Exercises
 - [Bob](bob)
 - [Flatten Array](flatten-array)
 - [Grains](grains)
-- [Linked list](linked-list)
+- [Linked List](linked-list)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
 - [Robot Name](robot-name)
@@ -52,8 +52,10 @@ Exercises
 
 ### Hard
 
+- [Simple Linked List*](simple-linked-list)
 - [Queen Attack](queen-attack)
 
+\* Exercism's JavaScript track has categorized the [Simple Linked List](simple-linked-list) implementation exercise as "hard", while the more advanced doubly linked list ([Linked List](linked-list)) implementation exercise has been categorized as "medium".
 
 Running Tests
 --------------------------------------------------------------------------------
