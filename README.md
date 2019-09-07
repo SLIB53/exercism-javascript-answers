@@ -44,16 +44,17 @@ Exercises
 - [Linked List](linked-list)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
+- [Pascal's Triangle](pascals-triangle)
 - [Robot Name](robot-name)
 - [Scrabble Score](scrabble-score)
+- [Secret Handshake](secret-handshake)
 - [Simple Cipher](simple-cipher)
 - [Sum of Multiples](sum-of-multiples)
-- [Pascal's Triangle](pascals-triangle)
 
 ### Hard
 
-- [Simple Linked List*](simple-linked-list)
 - [Queen Attack](queen-attack)
+- [Simple Linked List*](simple-linked-list)
 
 \* Exercism's JavaScript track has categorized the [Simple Linked List](simple-linked-list) implementation exercise as "hard", while the more advanced doubly linked list ([Linked List](linked-list)) implementation exercise has been categorized as "medium".
 
