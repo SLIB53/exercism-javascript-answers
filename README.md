@@ -50,6 +50,7 @@ Exercises
 - [Secret Handshake](secret-handshake)
 - [Simple Cipher](simple-cipher)
 - [Sum of Multiples](sum-of-multiples)
+- [Variable Length Quantity](variable-length-quantity)
 
 ### Hard
 
