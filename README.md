@@ -54,6 +54,7 @@ Exercises
 
 ### Hard
 
+- [Circular Buffer](circular-buffer)
 - [Queen Attack](queen-attack)
 - [Simple Linked List*](simple-linked-list)
 
