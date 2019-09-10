@@ -10,6 +10,31 @@ As with all exercism tracks, I practice creating these solutions to acquire a ba
 Exercises
 --------------------------------------------------------------------------------
 
+### Hard
+
+- [Circular Buffer](circular-buffer)
+- [Crypto Square](crypto-square)
+- [Queen Attack](queen-attack)
+- [Simple Linked List](simple-linked-list)
+
+### Medium
+
+- [All Your Base](all-your-base)
+- [Allergies](allergies)
+- [Bob](bob)
+- [Flatten Array](flatten-array)
+- [Grains](grains)
+- [Linked List](linked-list)
+- [Minesweeper](minesweeper)
+- [Nucleotide Count](nucleotide-count)
+- [Pascal's Triangle](pascals-triangle)
+- [Robot Name](robot-name)
+- [Scrabble Score](scrabble-score)
+- [Secret Handshake](secret-handshake)
+- [Simple Cipher](simple-cipher)
+- [Sum of Multiples](sum-of-multiples)
+- [Variable Length Quantity](variable-length-quantity)
+
 ### Easy
 
 - [Anagram](anagram)
@@ -33,33 +58,6 @@ Exercises
 - [Run Length Encoding](run-length-encoding)
 - [Triangle](triangle)
 - [Two Fer](two-fer)
-
-### Medium
-
-- [All Your Base](all-your-base)
-- [Allergies](allergies)
-- [Bob](bob)
-- [Flatten Array](flatten-array)
-- [Grains](grains)
-- [Linked List](linked-list)
-- [Minesweeper](minesweeper)
-- [Nucleotide Count](nucleotide-count)
-- [Pascal's Triangle](pascals-triangle)
-- [Robot Name](robot-name)
-- [Scrabble Score](scrabble-score)
-- [Secret Handshake](secret-handshake)
-- [Simple Cipher](simple-cipher)
-- [Sum of Multiples](sum-of-multiples)
-- [Variable Length Quantity](variable-length-quantity)
-
-### Hard
-
-- [Circular Buffer](circular-buffer)
-- [Crypto Square](crypto-square)
-- [Queen Attack](queen-attack)
-- [Simple Linked List*](simple-linked-list)
-
-\* Exercism's JavaScript track has categorized the [Simple Linked List](simple-linked-list) implementation exercise as "hard", while the more advanced doubly linked list ([Linked List](linked-list)) implementation exercise has been categorized as "medium".
 
 Running Tests
 --------------------------------------------------------------------------------
