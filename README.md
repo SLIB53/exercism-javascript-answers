@@ -43,6 +43,7 @@ Exercises
 - [D&D Character](dnd-character)
 - [Darts](darts)
 - [ETL](etl)
+- [Gigasecond](gigasecond)
 - [Hamming](hamming)
 - [Hello World](hello-world)
 - [Isogram](isogram)
