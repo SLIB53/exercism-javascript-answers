@@ -62,6 +62,7 @@ Exercises
 - [Space Age](space-age)
 - [Triangle](triangle)
 - [Two Fer](two-fer)
+- [Word Count](word-count)
 
 Running Tests
 --------------------------------------------------------------------------------
