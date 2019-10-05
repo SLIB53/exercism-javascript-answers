@@ -48,6 +48,7 @@ Exercises
 - [Hello World](hello-world)
 - [Isogram](isogram)
 - [Leap](leap)
+- [Matching Brackets](matching-brackets)
 - [Matrix](matrix)
 - [Pangram](pangram)
 - [Protein Translation](protein-translation)
