@@ -55,6 +55,7 @@ Exercises
 - [Matrix](matrix)
 - [Pangram](pangram)
 - [Perfect Numbers](perfect-numbers)
+- [Phone Number](phone-number)
 - [Protein Translation](protein-translation)
 - [Raindrops](raindrops)
 - [Resistor Color Duo](resistor-color-duo)
