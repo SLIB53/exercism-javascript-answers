@@ -37,6 +37,7 @@ Exercises
 
 ### Easy
 
+- [Acronym](acronym)
 - [Anagram](anagram)
 - [Armstrong Numbers](armstrong-numbers)
 - [Collatz Conjecture](collatz-conjecture)
