@@ -64,6 +64,7 @@ Exercises
 - [RNA Transcription](rna-transcription)
 - [Roman Numerals](roman-numerals)
 - [Run Length Encoding](run-length-encoding)
+- [Series](series)
 - [Space Age](space-age)
 - [Triangle](triangle)
 - [Two Fer](two-fer)
