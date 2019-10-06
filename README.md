@@ -42,6 +42,7 @@ Exercises
 - [Collatz Conjecture](collatz-conjecture)
 - [D&D Character](dnd-character)
 - [Darts](darts)
+- [Difference of Squares](difference-of-squares)
 - [ETL](etl)
 - [Gigasecond](gigasecond)
 - [Hamming](hamming)
