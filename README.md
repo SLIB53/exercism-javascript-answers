@@ -48,6 +48,7 @@ Exercises
 - [Gigasecond](gigasecond)
 - [Hamming](hamming)
 - [Hello World](hello-world)
+- [High Scores](high-scores)
 - [Isogram](isogram)
 - [Leap](leap)
 - [Matching Brackets](matching-brackets)
