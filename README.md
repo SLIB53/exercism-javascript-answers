@@ -53,6 +53,7 @@ Exercises
 - [Matching Brackets](matching-brackets)
 - [Matrix](matrix)
 - [Pangram](pangram)
+- [Perfect Numbers](perfect-numbers)
 - [Protein Translation](protein-translation)
 - [Raindrops](raindrops)
 - [Resistor Color Duo](resistor-color-duo)
