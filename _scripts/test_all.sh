@@ -4,18 +4,15 @@
 
 # Runs tests for each exercise, exiting with 1 if a test fails.
 
-BASE_DIR_PATH=`pwd`
+BASE_DIR_PATH=$(pwd)
 
-for exercise_dirname in */
-do
+for exercise_dirname in */; do
     cd $BASE_DIR_PATH'/'$exercise_dirname
 
-    if [ -f *.spec.js ]
-    then
+    if [ -f *.spec.js ]; then
         yarn
-        
-        if ! yarn test
-        then
+
+        if ! yarn test; then
             echo "Testing failed in $exercise_dirname"
             exit 1
         fi
