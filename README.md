@@ -66,6 +66,7 @@ Exercises
 - [Run Length Encoding](run-length-encoding)
 - [Series](series)
 - [Space Age](space-age)
+- [Transpose](transpose)
 - [Triangle](triangle)
 - [Two Fer](two-fer)
 - [Word Count](word-count)
