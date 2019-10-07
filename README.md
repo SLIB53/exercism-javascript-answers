@@ -63,6 +63,7 @@ Exercises
 - [Reverse String](reverse-string)
 - [RNA Transcription](rna-transcription)
 - [Roman Numerals](roman-numerals)
+- [Rotational Cipher](rotational-cipher)
 - [Run Length Encoding](run-length-encoding)
 - [Series](series)
 - [Space Age](space-age)
