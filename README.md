@@ -44,6 +44,7 @@ Exercises
 - [D&D Character](dnd-character)
 - [Darts](darts)
 - [Difference of Squares](difference-of-squares)
+- [Diffie Hellman](diffie-hellman)
 - [ETL](etl)
 - [Gigasecond](gigasecond)
 - [Hamming](hamming)
