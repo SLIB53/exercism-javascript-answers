@@ -23,6 +23,7 @@ Exercises
 - [Allergies](allergies)
 - [Bob](bob)
 - [Flatten Array](flatten-array)
+- [Grade School](grade-school)
 - [Grains](grains)
 - [Linked List](linked-list)
 - [Minesweeper](minesweeper)
