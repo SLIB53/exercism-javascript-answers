@@ -26,6 +26,7 @@ Exercises
 - [Grade School](grade-school)
 - [Grains](grains)
 - [Linked List](linked-list)
+- [List Ops](list-ops)
 - [Minesweeper](minesweeper)
 - [Nucleotide Count](nucleotide-count)
 - [Pascal's Triangle](pascals-triangle)
