@@ -4,25 +4,15 @@ const bracketDefs = [
   { openChar: "(", closeChar: ")", bracketType: "paren" }
 ];
 
-const bracketDefsByOpenChar = (() => {
-  let buffer = {};
-
-  for (const def of bracketDefs) {
-    buffer[def.openChar] = def;
-  }
-
+const bracketDefsByOpenChar = bracketDefs.reduce((buffer, def) => {
+  buffer[def.openChar] = def;
   return buffer;
-})();
+}, {});
 
-const bracketDefsByCloseChar = (() => {
-  let buffer = {};
-
-  for (const def of bracketDefs) {
-    buffer[def.closeChar] = def;
-  }
-
+const bracketDefsByCloseChar = bracketDefs.reduce((buffer, def) => {
+  buffer[def.closeChar] = def;
   return buffer;
-})();
+}, {});
 
 export const matchingBrackets = str => {
   let buffer = [];
@@ -32,13 +22,18 @@ export const matchingBrackets = str => {
     let defByCloseChar;
 
     if ((defByOpenChar = bracketDefsByOpenChar[c])) {
+      // is an open bracket
       buffer.push(defByOpenChar.bracketType);
     } else if ((defByCloseChar = bracketDefsByCloseChar[c])) {
-      if (buffer[buffer.length - 1] === defByCloseChar.bracketType)
+      // is a closing bracket
+      if (buffer[buffer.length - 1] === defByCloseChar.bracketType) {
+        // closing bracket matches last bracket
         buffer.pop();
-      else return false; // mismatching brace
+      } else {
+        return false;
+      }
     }
   }
 
-  return !buffer.length;
+  return buffer.length === 0;
 };
